@@ -26,16 +26,12 @@ p {
   background-color: $primary-color;
   margin-left: 30px;
 }
-.bar {
-  background-color: $special-color;
-}
 .card {
   padding-top: 15px;
   p {
     color: $primary-color;
   }
 }
-
 .hover-stroke-red:hover svg {
   stroke: $special-color;
 }
