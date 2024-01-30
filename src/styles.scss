@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+
+$primary-color: #1b3266;
+$secondary-color: #ffffff;
+$special-color: #ec3e3e;
+
+* {
+  font-family: "Sora", sans-serif;
+  color: $primary-color;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  display: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $primary-color;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+app-flag-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 2%;
+  height: 100%;
+  z-index: 50;
+}
+app-navbar {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+app-main-content {
+  z-index: 10;
+}
+.bar {
+  background-color: $special-color;
+}

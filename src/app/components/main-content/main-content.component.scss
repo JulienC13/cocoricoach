@@ -1,0 +1,41 @@
+@import "../../../styles.scss";
+
+.darken-image {
+  filter: brightness(0.6);
+}
+
+h1 {
+  color: $secondary-color;
+}
+.btn {
+  padding: 8px 20px;
+  border-radius: 10px;
+  .arrow {
+    background-color: white;
+  }
+}
+
+p {
+  color: $secondary-color;
+}
+#about {
+  color: $secondary-color;
+  background-color: $primary-color;
+}
+#services {
+  background-color: $primary-color;
+  margin-left: 30px;
+}
+.bar {
+  background-color: $special-color;
+}
+.card {
+  padding-top: 15px;
+  p {
+    color: $primary-color;
+  }
+}
+
+.hover-stroke-red:hover svg {
+  stroke: $special-color;
+}

@@ -1,0 +1,79 @@
+<div id="drawer-navigation" class="sidebar" [class.open]="isSidebarOpen">
+  <div class="flag-banner-container">
+    <div class="flag-banner" (click)="toggleSidebar()">
+      <div class="blue-band"></div>
+      <div class="white-band"></div>
+      <div class="red-band"></div>
+    </div>
+    <button
+      class="sidebar-toggle-button -right-20 md:-right-24"
+      (click)="toggleSidebar()"
+    >
+      <p class="text-white font-bold -rotate-90 pt-16 pb-3">Info</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="white"
+        class="w-16 h-16"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m8.25 4.5 7.5 7.5-7.5 7.5"
+        />
+      </svg>
+    </button>
+    <section
+      class="px-4 md:px-6 md:h-screen flex flex-col overflow-auto md:overflow-hidden md:items-center md:justify-center md:text-center"
+    >
+      <h3 class="text-xl md:text-3xl font-bold text-white md:mt-24">
+        Bienvenue chez Cocoricoach Sportif
+      </h3>
+      <div
+        class="bar mx-auto mb-4 mt-4 md:mb-8 md:mt-6 h-0.5 w-40 md:w-64"
+      ></div>
+      <p class="text-sm md:text-lg text-white mb-2 md:mb-3">
+        Je vous invite à découvrir ma vision unique du coaching sportif,
+        combinant passion et personnalisation, directement chez vous.
+      </p>
+
+      <h2 class="text-lg md:text-2xl text-white font-semibold mb-2">
+        Un Coaching Sur Mesure
+      </h2>
+      <div
+        class="bar mx-auto mb-4 mt-2 md:mb-8 md:mt-3 h-0.5 w-10 md:w-20"
+      ></div>
+      <p class="text-sm md:text-base mb-2 md:mb-3 text-white">
+        Chez Cocoricoach Sportif, je crois que le sport est plus qu'un exercice
+        physique - c'est une expérience personnalisée, adaptée à vos besoins et
+        objectifs. Que vous soyez débutant ou sportif expérimenté, je suis là
+        pour vous accompagner dans votre parcours sportif.
+      </p>
+
+      <h2 class="text-lg md:text-2xl text-white font-semibold mb-2">
+        Pour Tous, À Tout Âge
+      </h2>
+      <div
+        class="bar mx-auto mb-4 mt-2 md:mb-8 md:mt-3 h-0.5 w-10 md:w-20"
+      ></div>
+      <p class="text-sm md:text-base mb-2 md:mb-3 text-white">
+        Mes programmes s'adressent à tous, des jeunes aux seniors, conçus
+        spécialement pour répondre à chacun de vos besoins uniques.
+      </p>
+
+      <h2 class="text-lg md:text-2xl text-white font-semibold mb-2">
+        Une Relation Humaine et Proche
+      </h2>
+      <div
+        class="bar mx-auto mb-4 mt-2 md:mb-8 md:mt-3 h-0.5 w-10 md:w-20"
+      ></div>
+      <p class="text-sm md:text-base text-white">
+        Je mets un point d'honneur sur la relation humaine et le suivi
+        personnalisé. Chaque client est unique, et mon approche reflète cette
+        philosophie.
+      </p>
+    </section>
+  </div>
+</div>

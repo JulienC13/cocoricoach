@@ -1,0 +1,96 @@
+<form
+  id="form"
+  class="pb-20 pt-28 background-contact flex justify-center"
+  method="post"
+  action="https://formspree.io/f/xoqgvpje"
+  (ngSubmit)="submitForm()"
+  enctype="multipart/form-data"
+>
+  <div class="background-form w-full xl:w-4/12 mx-auto">
+    <h2 class="text-center text-2xl font-bold">Contactez moi :</h2>
+    <div class="bar mx-auto my-8 h-0.5 w-full"></div>
+    <div class="grid md:grid-cols-1">
+      <div>
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-bold mb-2">Nom:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-bold mb-2">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="block text-sm font-bold mb-2"
+            >Message:</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            required
+          ></textarea>
+        </div>
+        <div class="flex justify-center">
+          <button
+            type="submit"
+            class="w-36 button hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Envoyer
+          </button>
+        </div>
+      </div>
+      <div class="bar mx-auto my-10 w-3/6 h-0.5"></div>
+      <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center">
+        <a
+          target="_blank"
+          href="https://www.instagram.com/cocoricoachsportif/?theme=dark"
+        >
+          <img
+            src="assets/Icone/instagram.png"
+            alt="Contact"
+            class="w-10 object-cover pb-0 xl:pb-5 hover:scale-105"
+          />
+        </a>
+        <p class="text-md font-bold py-5 xl:py-0">&commat;cocoricoachsportif</p>
+        <a
+          target="_blank"
+          href="https://www.facebook.com/cocoricoachsportif?locale=fr_FR"
+        >
+          <img
+            src="assets/Icone/facebook.png"
+            alt="Contact"
+            class="w-10 object-cover hover:scale-105 xl:pb-5"
+          />
+        </a>
+        <p class="text-md font-bold py-5 xl:pt-0">&commat;CocoricoachSportif</p>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/lou-noël-cocoricoach-sportif-88b0312a5/"
+        >
+          <img
+            src="assets/Icone/linkedin.png"
+            alt="Contact"
+            class="w-10 object-cover hover:scale-105"
+          />
+        </a>
+        <p class="text-md font-bold pt-5 xl:pt-0">
+          Lou Noël Cocoricoach Sportif
+        </p>
+      </div>
+    </div>
+  </div>
+</form>
