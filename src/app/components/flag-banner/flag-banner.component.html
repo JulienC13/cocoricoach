@@ -6,17 +6,22 @@
       <div class="red-band"></div>
     </div>
     <button
-      class="sidebar-toggle-button -right-20 md:-right-24"
+      id="sidebar-button"
+      class="hidden -right-20 md:-right-24"
       (click)="toggleSidebar()"
     >
-      <p class="text-white font-bold -rotate-90 pt-16 pb-3">Info</p>
+      <p
+        class="text-white font-bold text-sm md:text-base -rotate-90 pt-12 md:pt-16 pb-3"
+      >
+        Info
+      </p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="white"
-        class="w-16 h-16"
+        class="md:w-16 md:h-16 w-12 h-12"
       >
         <path
           stroke-linecap="round"

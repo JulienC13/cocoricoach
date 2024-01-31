@@ -1,18 +1,20 @@
 <main class="main-content">
-  <header class="h-screen flex items-center justify-center" id="home">
+  <header class="h-screen flex lg:items-center lg:justify-center" id="home">
     <img
       src="assets/background-landing.jpg"
       class="w-full h-screen bg-cover object-cover darken-image z-1 relative"
       alt=""
     />
-    <div class="container pl-10 absolute text-center pt-56 xl:pl-80 xl:pt-0">
+    <div
+      class="container pl-10 absolute text-center pt-64 lg:pt-56 xl:pl-80 xl:pt-0"
+    >
       <h1 class="uppercase text-2xl xl:text-4xl font-bold drop-shadow-lg">
         Dynamisez Votre Routine Sportive avec un
       </h1>
       <h1 class="uppercase text-2xl md:text-4xl font-bold drop-shadow-lg pt-10">
         Coaching Personnalisé et Passionné
       </h1>
-      <p class="pt-24 md:pt-44 md:text-2xl drop-shadow-lg pb-10">
+      <p class="pt-14 md:pt-44 md:text-2xl drop-shadow-lg pb-10">
         Réservez votre première séance dès maintenant !
       </p>
       <button class="btn drop-shadow-lg animate-bounce hover-stroke-red">
@@ -79,7 +81,11 @@
           et la réussite personnelle sont au rendez-vous.
         </p>
         <div class="w-full flex flex-col items-center pt-10">
-          <h3 class="text-2xl text-white pb-16 text-center">Diplôme :</h3>
+          <h3 class="text-2xl text-white pb-10 text-center">Diplôme :</h3>
+          <p class="text-sm pb-10">
+            Cliquez ou scannez le QR code pour découvrir la licence STAPS
+            professionnelle de Lou Noël, validée par le Ministère des Sports.
+          </p>
           <a
             href="https://recherche-educateur.sports.gouv.fr/CartePro/00623ED0253"
             class="transition-transform ease-in-out duration-300 hover:scale-105"
@@ -88,7 +94,7 @@
             <img
               src="assets/Qr-code.png"
               alt="Qr-code diplome STAPS"
-              class="w-46 pl-20"
+              class="w-36 lg:w-46"
             />
           </a>
         </div>
@@ -97,7 +103,7 @@
   </section>
   <section id="services" class="py-11 w-full">
     <div
-      class="grid grid-cols-1 xl:grid-cols-2 place-items-center bg-white opacity-70 gap-5 px-4 xl:px-96 py-10"
+      class="grid grid-cols-1 xl:grid-cols-2 place-items-center bg-white opacity-70 gap-5 px-auto xl:px-96 py-10 pr-7"
     >
       <!-- Plan Nutritionnel
       <div class="card w-64 pt-0 text-center">
@@ -116,7 +122,6 @@
         </p>
       </div> -->
 
-      <!-- Programme Personnalisé -->
       <div class="card w-64 pt-0 text-center">
         <img
           src="assets/Icone/programme-de-formation.png"
@@ -135,7 +140,6 @@
         </p>
       </div>
 
-      <!-- Coaching Direct -->
       <div class="card w-64 pt-0 text-center">
         <img
           src="assets/Icone/relation-amicale.png"
