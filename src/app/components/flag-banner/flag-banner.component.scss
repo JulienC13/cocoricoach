@@ -87,9 +87,6 @@
   }
   #sidebar {
     @media (max-width: 640px) {
-      padding-top: 10rem;
-    }
-    @media (max-device-width: 360px) {
       padding-top: 20rem;
     }
   }
