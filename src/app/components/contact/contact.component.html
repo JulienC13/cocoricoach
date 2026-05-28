@@ -1,100 +1,93 @@
-<form
-  id="form"
-  class="pb-20 pt-28 background-contact flex justify-center"
-  method="post"
-  action="https://formspree.io/f/xoqgvpje"
-  (ngSubmit)="submitForm()"
-  enctype="multipart/form-data"
->
-  <div class="background-form w-full xl:w-4/12 mx-auto">
-    <h2 class="text-center text-2xl font-bold">Contactez moi :</h2>
-    <div class="bar mx-auto my-8 h-0.5 w-full"></div>
-    <div class="grid md:grid-cols-1">
-      <div>
-        <div class="mb-4">
-          <label for="name" class="block text-sm font-bold mb-2">Nom:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
-          />
-        </div>
+<section class="contact-section pb-24 pt-24 px-6">
 
-        <div class="mb-4">
-          <label for="email" class="block text-sm font-bold mb-2">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
-          />
-        </div>
+  <div class="text-center mb-12 scroll-reveal">
+    <p class="section-label text-sm font-semibold tracking-widest uppercase mb-3">Me Contacter</p>
+    <h2 class="text-white text-3xl md:text-4xl font-bold mb-5">Démarrons ensemble</h2>
+    <div class="bar mx-auto h-0.5 w-20"></div>
+  </div>
 
-        <div class="mb-4">
-          <label for="message" class="block text-sm font-bold mb-2"
-            >Message:</label
-          >
-          <textarea
-            id="message"
-            name="message"
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            required
-          ></textarea>
-        </div>
-        <div class="flex justify-center">
-          <button
-            type="submit"
-            class="w-36 button hover:bg-red-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-          >
-            Envoyer
-          </button>
-        </div>
+  <form
+    id="form"
+    class="flex justify-center scroll-reveal delay-1"
+    method="post"
+    action="https://formspree.io/f/xoqgvpje"
+    (ngSubmit)="submitForm()"
+    enctype="multipart/form-data"
+  >
+    <div class="form-card w-full xl:w-5/12">
+
+      <div class="mb-6">
+        <label for="name" class="block text-sm font-semibold mb-2">Nom complet</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Votre nom"
+          class="form-input w-full py-3 px-4 rounded-xl text-gray-800 transition-all duration-200"
+          required
+        />
       </div>
-      <div class="bar mx-auto my-10 w-3/6 h-0.5"></div>
-      <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center">
+
+      <div class="mb-6">
+        <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="votre@email.com"
+          class="form-input w-full py-3 px-4 rounded-xl text-gray-800 transition-all duration-200"
+          required
+        />
+      </div>
+
+      <div class="mb-8">
+        <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Décrivez vos objectifs, votre niveau actuel, vos disponibilités..."
+          class="form-input w-full py-3 px-4 rounded-xl text-gray-800 transition-all duration-200 resize-none"
+          required
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="send-btn w-full py-3 px-8 rounded-xl text-white font-bold text-base transition-all duration-300 mb-8"
+      >
+        Envoyer le message →
+      </button>
+
+      <div class="bar w-full h-0.5 mb-8"></div>
+
+      <div class="flex flex-col gap-3">
         <a
           target="_blank"
           href="https://www.instagram.com/cocoricoachsportif/?theme=dark"
+          class="social-link"
         >
-          <img
-            src="assets/Icone/instagram.png"
-            alt="Contact"
-            class="w-10 object-cover pb-0 xl:pb-5 hover:scale-105"
-          />
+          <img src="assets/Icone/instagram.png" alt="Instagram" class="w-7 h-7 flex-shrink-0" />
+          <span>&#64;cocoricoachsportif</span>
         </a>
-        <p class="text-sm md:text-base font-bold py-5 xl:py-0">
-          &commat;cocoricoachsportif
-        </p>
         <a
           target="_blank"
           href="https://www.facebook.com/cocoricoachsportif?locale=fr_FR"
+          class="social-link"
         >
-          <img
-            src="assets/Icone/facebook.png"
-            alt="Contact"
-            class="w-10 object-cover hover:scale-105 xl:pb-5"
-          />
+          <img src="assets/Icone/facebook.png" alt="Facebook" class="w-7 h-7 flex-shrink-0" />
+          <span>&#64;CocoricoachSportif</span>
         </a>
-        <p class="text-sm md:text-base font-bold py-5 xl:py-0">
-          &commat;CocoricoachSportif
-        </p>
         <a
           target="_blank"
           href="https://www.linkedin.com/in/lou-noël-cocoricoach-sportif-88b0312a5/"
+          class="social-link"
         >
-          <img
-            src="assets/Icone/linkedin.png"
-            alt="Contact"
-            class="w-10 object-cover hover:scale-105"
-          />
+          <img src="assets/Icone/linkedin.png" alt="LinkedIn" class="w-7 h-7 flex-shrink-0" />
+          <span>Lou Noël — Cocoricoach Sportif</span>
         </a>
-        <p class="text-sm md:text-base font-bold pt-5 xl:pt-0">
-          Lou Noël Cocoricoach Sportif
-        </p>
       </div>
+
     </div>
-  </div>
-</form>
+  </form>
+</section>

@@ -1,37 +1,161 @@
 @import "../../../styles.scss";
 
-.darken-image {
-  filter: brightness(0.6);
+// ── Hero ─────────────────────────────────────────────────────────
+.hero-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(27, 50, 102, 0.88) 0%,
+    rgba(12, 24, 60, 0.78) 55%,
+    rgba(120, 20, 20, 0.35) 100%
+  );
 }
 
-h1 {
-  color: $secondary-color;
+.hero-label {
+  color: $special-color;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  animation: heroTextIn 0.8s ease-out forwards;
 }
-.btn {
-  padding: 8px 20px;
-  border-radius: 10px;
-  .arrow {
-    background-color: white;
+
+.hero-title {
+  opacity: 0;
+}
+
+.gradient-text {
+  background: linear-gradient(120deg, #ff8a8a 0%, $special-color 40%, #ff8a8a 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, $special-color 0%, darken(#ec3e3e, 12%) 100%);
+  box-shadow: 0 0 24px rgba(236, 62, 62, 0.45);
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(236, 62, 62, 0.6);
   }
 }
 
-p {
-  color: $secondary-color;
+.animate-hero-text {
+  opacity: 0;
+  animation: heroTextIn 0.8s ease-out forwards;
 }
-#about {
-  color: $secondary-color;
+
+// ── About ────────────────────────────────────────────────────────
+.about-section {
   background-color: $primary-color;
 }
-#services {
-  background-color: $primary-color;
-  margin-left: 30px;
+
+.section-label {
+  color: $special-color;
+  letter-spacing: 0.15em;
 }
-.card {
-  padding-top: 15px;
-  p {
+
+.accent-text {
+  color: #ff8a8a;
+}
+
+.logo-glow-container {
+  .logo-glow {
+    background: radial-gradient(circle, rgba(236, 62, 62, 0.18) 0%, transparent 68%);
+    transform: scale(1.3);
+    filter: blur(24px);
+    pointer-events: none;
+  }
+}
+
+.logo-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.diploma-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+// ── Services ─────────────────────────────────────────────────────
+.services-section {
+  background: linear-gradient(180deg, darken(#1b3266, 4%) 0%, $primary-color 100%);
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+  border: 1px solid rgba(236, 62, 62, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+  h3 {
     color: $primary-color;
   }
+
+  p {
+    color: #4b5563;
+  }
+
+  .icon-wrapper {
+    background: rgba(27, 50, 102, 0.06);
+    border: 2px solid rgba(27, 50, 102, 0.1);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 48px rgba(236, 62, 62, 0.18);
+    border-color: rgba(236, 62, 62, 0.25);
+
+    .icon-wrapper {
+      background: rgba(236, 62, 62, 0.08);
+      border-color: rgba(236, 62, 62, 0.2);
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  &--featured {
+    background: linear-gradient(145deg, $primary-color 0%, darken(#1b3266, 10%) 100%);
+    border-color: rgba(236, 62, 62, 0.3);
+    box-shadow: 0 8px 32px rgba(27, 50, 102, 0.35);
+
+    h3 {
+      color: white;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    .icon-wrapper {
+      background: rgba(236, 62, 62, 0.15);
+      border-color: rgba(236, 62, 62, 0.25);
+    }
+
+    &:hover {
+      box-shadow: 0 24px 48px rgba(236, 62, 62, 0.3);
+    }
+  }
 }
-.hover-stroke-red:hover svg {
-  stroke: $special-color;
+
+.badge-popular {
+  background: rgba(236, 62, 62, 0.2);
+  color: #ff8a8a;
+  border: 1px solid rgba(236, 62, 62, 0.3);
+}
+
+// ── Scroll-to-top ────────────────────────────────────────────────
+.scroll-top-btn {
+  background: $special-color;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background: darken(#ec3e3e, 10%);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(236, 62, 62, 0.45);
+  }
 }

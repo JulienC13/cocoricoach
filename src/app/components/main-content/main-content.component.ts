@@ -1,7 +1,6 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-content',
@@ -10,18 +9,36 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
-export class MainContentComponent {
-  faArrowDown = faArrowDown;
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
+export class MainContentComponent implements AfterViewInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  @HostListener('window:scroll')
+  onScroll() {
     const arrowButton = document.getElementById('arrowButton');
     if (arrowButton) {
-      if (window.scrollY > window.innerHeight) {
-        // 100vh
-        arrowButton.classList.remove('hidden');
-      } else {
-        arrowButton.classList.add('hidden');
-      }
+      arrowButton.classList.toggle('hidden', window.scrollY <= window.innerHeight);
     }
+  }
+
+  ngAfterViewInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.initScrollReveal();
+    }
+  }
+
+  private initScrollReveal() {
+    const elements = document.querySelectorAll<HTMLElement>('.scroll-reveal');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    elements.forEach((el) => observer.observe(el));
   }
 }

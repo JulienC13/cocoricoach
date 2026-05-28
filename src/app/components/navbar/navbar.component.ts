@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -14,10 +12,16 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
   menuOpen = false;
+  scrolled = false;
   faBars = faBars;
   faTimes = faTimes;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+  }
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.scrolled = window.scrollY > 60;
   }
 }

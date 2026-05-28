@@ -1,26 +1,26 @@
 <nav
-  class="nav fixed w-full z-50 bg-white/70 backdrop-blur-sm shadow-md py-4 pr-11"
+  class="nav fixed w-full z-50 py-4 pr-11 transition-all duration-300"
+  [class.scrolled]="scrolled"
 >
   <div class="flex justify-between items-center px-4 xl:space-x-20">
     <a href="#" class="logo pl-10 xl:ml-40">
-      <img src="assets/Logo.png" alt="Logo" class="w-12 xl:w-16" />
+      <img src="assets/Logo.png" alt="Logo" class="w-12 xl:w-16 transition-all duration-300" [class.w-10]="scrolled" [class.xl:w-14]="scrolled" />
     </a>
     <div class="xl:flex space-x-28 hidden xl:pr-40">
-      <a href="#" class="text-md font-bold hover-red">ACCUEIL</a>
-      <a href="#about" class="text-md font-bold hover-red">A PROPOS</a>
-      <a href="#form" class="text-md font-bold hover-red">CONTACT</a>
+      <a href="#" class="nav-link text-md font-bold">ACCUEIL</a>
+      <a href="#about" class="nav-link text-md font-bold">À PROPOS</a>
+      <a href="#form" class="nav-link text-md font-bold">CONTACT</a>
     </div>
-    <button (click)="toggleMenu()" class="burger scale-150 xl:hidden">
-      <fa-icon [icon]="menuOpen ? faTimes : faBars"></fa-icon>
+    <button (click)="toggleMenu()" class="burger xl:hidden" [class.text-primary]="scrolled">
+      <fa-icon [icon]="menuOpen ? faTimes : faBars" class="text-xl"></fa-icon>
     </button>
   </div>
   <div
-    [ngClass]="{ hidden: !menuOpen }"
-    class="flex flex-col items-center justify-center z-50"
     [class.hidden]="!menuOpen"
+    class="flex flex-col items-center justify-center z-50 pt-4 pb-2"
   >
-    <a href="#" class="text-lg font-bold pb-6 hover-red">ACCUEIL</a>
-    <a href="#about" class="text-lg font-bold pb-6 hover-red">A PROPOS</a>
-    <a href="#form" class="text-lg font-bold hover-red">CONTACT</a>
+    <a href="#" class="nav-link text-lg font-bold pb-5">ACCUEIL</a>
+    <a href="#about" class="nav-link text-lg font-bold pb-5">À PROPOS</a>
+    <a href="#form" class="nav-link text-lg font-bold pb-2">CONTACT</a>
   </div>
 </nav>

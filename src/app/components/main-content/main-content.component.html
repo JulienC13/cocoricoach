@@ -1,180 +1,172 @@
 <main class="main-content">
-  <header class="h-screen flex lg:items-center lg:justify-center" id="home">
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════ -->
+  <header class="hero-section relative h-screen flex items-center justify-center overflow-hidden" id="home">
     <img
       src="assets/background-landing.jpg"
-      class="w-full h-screen bg-cover object-cover darken-image z-1 relative"
-      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      alt="Coaching sportif"
     />
-    <div
-      class="container pl-10 absolute text-center pt-64 lg:pt-56 xl:pl-80 xl:pt-0"
-    >
-      <h1 class="uppercase text-2xl xl:text-4xl font-bold drop-shadow-lg">
-        Dynamisez Votre Routine Sportive avec un
-      </h1>
-      <h1 class="uppercase text-2xl md:text-4xl font-bold drop-shadow-lg pt-10">
-        Coaching Personnalisé et Passionné
-      </h1>
-      <p class="pt-14 md:pt-44 md:text-2xl drop-shadow-lg pb-10">
-        Réservez votre première séance dès maintenant !
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <p class="hero-label animate-hero-text text-sm md:text-base font-semibold tracking-widest uppercase mb-5">
+        Coaching Sportif Personnalisé
       </p>
-      <button class="btn drop-shadow-lg animate-bounce hover-stroke-red">
-        <a href="#form">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="white"
-            class="w-14 h-14"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
+      <h1 class="hero-title animate-hero-text text-3xl md:text-5xl xl:text-6xl font-bold text-white leading-tight" style="animation-delay:.25s">
+        Dynamisez Votre<br />
+        <span class="gradient-text">Routine Sportive</span>
+      </h1>
+      <p class="animate-hero-text mt-6 md:mt-8 text-base md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed" style="animation-delay:.5s">
+        Un accompagnement personnalisé et passionné pour atteindre vos objectifs sportifs
+      </p>
+      <div class="animate-hero-text mt-10" style="animation-delay:.75s">
+        <a href="#form" class="cta-button inline-flex items-center gap-3 px-8 py-4 rounded-full text-white font-semibold text-base md:text-lg transition-all duration-300">
+          Réserver une séance
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
           </svg>
         </a>
-      </button>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce opacity-70">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-7 h-7">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+      </svg>
     </div>
   </header>
-  <section id="about" class="py-24 2xl:px-64">
-    <h2
-      class="text-center text-white text-2xl md:text-4xl font-bold mx-16 pb-5"
-    >
-      Bienvenue chez Cocoricoach Sportif
-    </h2>
-    <div class="bar mx-auto h-0.5 w-12 xl:w-80 mb-16"></div>
-    <div
-      class="flex flex-col items-center xl:justify-center xl:flex-row xl:space-x-72 xl:mx-24 mx-16"
-    >
-      <img
-        class="w-96 pb-16 xl:pb-0"
-        src="assets/Logo.png"
-        alt="Cocoricoach Sportif"
-      />
-      <article class="text-justify xl:text-start">
-        <p class="text-l md:text-xl">
-          Je m'appelle <span class="font-bold text-white">Lou Noël</span>,
-          fondateur et coach personnel de
-          <I class="text-white">Cocoricoach Sportif</I>, récemment diplômé d'une
-          licence STAPS avec une spécialisation en préparation physique. En tant
-          qu'entraîneur sportif passionné, je suis déterminé à offrir des
-          services de coaching personnalisés qui transcendent les attentes.
+
+  <!-- ═══════════════════════════════════════════════════
+       À PROPOS
+  ════════════════════════════════════════════════════ -->
+  <section id="about" class="about-section py-24 px-6 xl:px-16 2xl:px-32">
+    <div class="section-header text-center mb-16 scroll-reveal">
+      <p class="section-label text-sm font-semibold tracking-widest uppercase mb-3">À Propos</p>
+      <h2 class="text-white text-3xl md:text-4xl font-bold mb-5">Bienvenue chez Cocoricoach Sportif</h2>
+      <div class="bar mx-auto h-0.5 w-20"></div>
+    </div>
+
+    <div class="flex flex-col xl:flex-row items-center gap-12 xl:gap-20 max-w-6xl mx-auto">
+      <div class="logo-wrapper flex-shrink-0 scroll-reveal delay-1">
+        <div class="logo-glow-container relative">
+          <div class="logo-glow absolute inset-0 rounded-full"></div>
+          <img
+            class="logo-float w-56 md:w-72 xl:w-80 relative z-10"
+            src="assets/Logo.png"
+            alt="Cocoricoach Sportif"
+          />
+        </div>
+      </div>
+
+      <article class="text-white space-y-5 max-w-2xl scroll-reveal delay-2">
+        <p class="text-base md:text-lg leading-relaxed text-gray-100">
+          Je m'appelle <span class="font-bold text-white">Lou Noël</span>, fondateur et coach personnel de
+          <em class="accent-text not-italic font-semibold">Cocoricoach Sportif</em>, récemment diplômé d'une
+          licence STAPS avec une spécialisation en préparation physique. En tant qu'entraîneur sportif passionné,
+          je suis déterminé à offrir des services de coaching personnalisés qui transcendent les attentes.
         </p>
-        <div class="bar mx-auto my-8 h-0.5 w-20"></div>
-        <p class="pt-8 text-l md:text-xl">
-          Mon enthousiasme contagieux et mon énergie débordante font de chaque
-          séance un moment dynamique et motivant. En tant que coach, je crois en
-          la capacité de chacun à se dépasser, et c'est avec cet état d'esprit
-          que j'aide mes clients à atteindre leurs objectifs sportifs et de
-          bien-être. Mon engagement envers chaque personne que je guide va
-          au-delà des exercices physiques ; je m'efforce de créer une connexion
-          authentique pour un soutien optimal. Avec une approche à la fois
-          professionnelle et empathique, je m'assure que chaque client, du
-          débutant au sportif aguerri, se sente soutenu dans son parcours
-          personnel.
+        <div class="bar h-0.5 w-16"></div>
+        <p class="text-base md:text-lg leading-relaxed text-gray-300">
+          Mon enthousiasme contagieux et mon énergie débordante font de chaque séance un moment dynamique et motivant.
+          Je crois en la capacité de chacun à se dépasser, et c'est avec cet état d'esprit que j'aide mes clients à
+          atteindre leurs objectifs sportifs et de bien-être. Mon engagement va au-delà des exercices physiques ;
+          je m'efforce de créer une connexion authentique pour un soutien optimal.
         </p>
-        <div class="bar mx-auto my-8 h-0.5 w-20"></div>
-        <p class="pt-8 text-l md:text-xl">
-          Rejoignez-moi chez <I class="text-white">Cocoricoach Sportif</I> pour
-          une expérience de coaching où le professionnalisme, l'énergie positive
-          et la réussite personnelle sont au rendez-vous.
+        <div class="bar h-0.5 w-16"></div>
+        <p class="text-base md:text-lg leading-relaxed text-gray-300">
+          Rejoignez-moi chez <em class="accent-text not-italic font-semibold">Cocoricoach Sportif</em> pour
+          une expérience de coaching où le professionnalisme, l'énergie positive et la réussite personnelle sont au rendez-vous.
         </p>
-        <div class="w-full flex flex-col items-center pt-10">
-          <h3 class="text-2xl text-white pb-10 text-center">Diplôme :</h3>
-          <p class="text-sm pb-10">
-            Cliquez ou scannez le QR code pour découvrir la licence STAPS
-            professionnelle de Lou Noël, validée par le Ministère des Sports.
+
+        <!-- Diplôme card -->
+        <div class="diploma-card mt-6 p-6 rounded-2xl">
+          <h3 class="text-white font-bold text-base mb-3 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 accent-text">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 3.741-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+            </svg>
+            Diplôme STAPS — Ministère des Sports
+          </h3>
+          <p class="text-gray-400 text-sm mb-4 leading-relaxed">
+            Cliquez ou scannez le QR code pour consulter la carte professionnelle de Lou Noël, validée par le Ministère des Sports.
           </p>
           <a
             href="https://recherche-educateur.sports.gouv.fr/CartePro/00623ED0253"
-            class="transition-transform ease-in-out duration-300 hover:scale-105"
+            class="inline-flex items-center gap-4 transition-transform duration-300 hover:scale-105"
             target="_blank"
           >
-            <img
-              src="assets/Qr-code.png"
-              alt="Qr-code diplome STAPS"
-              class="w-36 lg:w-46"
-            />
+            <img src="assets/Qr-code.png" alt="QR code diplôme STAPS" class="w-24 md:w-28 rounded-lg" />
+            <span class="accent-text text-sm font-semibold hover:underline">Vérifier le diplôme →</span>
           </a>
         </div>
       </article>
     </div>
   </section>
-  <section id="services" class="py-11 w-full">
-    <div
-      class="grid grid-cols-1 xl:grid-cols-2 place-items-center bg-white opacity-70 gap-5 px-auto xl:px-96 py-10 pr-7"
-    >
-      <!-- Plan Nutritionnel
-      <div class="card w-64 pt-0 text-center">
-        <img
-          src="assets/Icone/nutrition.png"
-          alt="logo plan nutritionnel"
-          class="w-20 md:w-36 mx-auto"
-        />
-        <h3 class="text-l font-bold pt-3 pb-7">Plan Nutritionnel</h3>
-        <p class="text-sm text-justify">
-          Un plan nutritionnel personnalisé est la clé pour atteindre vos
-          objectifs de santé et de forme physique. Il est conçu pour s'adapter à
-          votre style de vie, vos préférences alimentaires et vos besoins
-          spécifiques, vous aidant à nourrir votre corps de manière optimale
-          tout en profitant de chaque repas.
-        </p>
-      </div> -->
 
-      <div class="card w-64 pt-0 text-center">
-        <img
-          src="assets/Icone/programme-de-formation.png"
-          alt="logo programme de formation"
-          class="w-20 xl:w-36 mx-auto"
-        />
-        <h3 class="text-l md:text-xl font-bold pt-3 pb-7">
-          Programme Personnalisé
-        </h3>
-        <p class="text-sm md:text-lg text-justify">
-          Le programme personnalisé est conçu pour s'adapter à vos objectifs
-          uniques, que ce soit pour la perte de poids, le gain musculaire, ou
-          l'amélioration de l'endurance. Chaque séance est soigneusement
-          planifiée pour maximiser vos résultats, en tenant compte de votre
-          niveau de forme actuel et de votre progression.
+  <!-- ═══════════════════════════════════════════════════
+       SERVICES
+  ════════════════════════════════════════════════════ -->
+  <section id="services" class="services-section py-20 px-6">
+    <div class="section-header text-center mb-16 scroll-reveal">
+      <p class="section-label text-sm font-semibold tracking-widest uppercase mb-3">Ce que je propose</p>
+      <h2 class="text-white text-3xl md:text-4xl font-bold mb-5">Mes Services</h2>
+      <div class="bar mx-auto h-0.5 w-20"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <div class="service-card rounded-2xl p-8 text-center scroll-reveal delay-1">
+        <div class="icon-wrapper w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center">
+          <img src="assets/Icone/nutrition.png" alt="Plan nutritionnel" class="w-12 h-12 transition-transform duration-300 group-hover:scale-110" />
+        </div>
+        <h3 class="text-xl font-bold mb-4">Plan Nutritionnel</h3>
+        <p class="text-sm leading-relaxed">
+          Un plan nutritionnel personnalisé adapté à votre style de vie, vos préférences alimentaires
+          et vos besoins spécifiques pour nourrir votre corps de manière optimale.
         </p>
       </div>
 
-      <div class="card w-64 pt-0 text-center">
-        <img
-          src="assets/Icone/relation-amicale.png"
-          alt="logo coaching direct"
-          class="w-20 xl:w-36 mx-auto"
-        />
-        <h3 class="text-l md:text-xl font-bold pt-3 pb-7">Coaching Direct</h3>
-        <p class="text-sm md:text-lg text-justify">
-          Le coaching en direct vous offre une expérience personnalisée et
-          interactive. C'est l'occasion de bénéficier d'un accompagnement
-          direct, de conseils adaptés en temps réel et d'un soutien constant
-          pour vous aider à rester motivé et concentré sur vos objectifs.
+      <div class="service-card service-card--featured rounded-2xl p-8 text-center scroll-reveal delay-2">
+        <div class="icon-wrapper w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center">
+          <img src="assets/Icone/programme-de-formation.png" alt="Programme personnalisé" class="w-12 h-12 transition-transform duration-300" />
+        </div>
+        <h3 class="text-xl font-bold mb-4">Programme Personnalisé</h3>
+        <p class="text-sm leading-relaxed">
+          Conçu pour vos objectifs uniques : perte de poids, gain musculaire ou amélioration de l'endurance.
+          Chaque séance est planifiée pour maximiser vos résultats.
+        </p>
+        <div class="mt-6">
+          <span class="badge-popular inline-block px-4 py-1 rounded-full text-xs font-bold">Populaire</span>
+        </div>
+      </div>
+
+      <div class="service-card rounded-2xl p-8 text-center scroll-reveal delay-3">
+        <div class="icon-wrapper w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center">
+          <img src="assets/Icone/relation-amicale.png" alt="Coaching direct" class="w-12 h-12 transition-transform duration-300" />
+        </div>
+        <h3 class="text-xl font-bold mb-4">Coaching Direct</h3>
+        <p class="text-sm leading-relaxed">
+          Une expérience personnalisée et interactive avec un accompagnement direct, des conseils
+          adaptés en temps réel et un soutien constant pour vous maintenir motivé.
         </p>
       </div>
+
     </div>
   </section>
+
+  <!-- Scroll to top -->
   <button
     id="arrowButton"
-    class="z-100 fixed animate-bounce bottom-1 right-1 hidden hover-stroke-red"
+    class="scroll-top-btn z-50 fixed bottom-6 right-6 hidden rounded-full p-3 shadow-xl transition-all duration-300"
   >
     <a href="#">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="white"
-        class="w-16 h-16"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-        />
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="white" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
       </svg>
     </a>
   </button>
+
 </main>

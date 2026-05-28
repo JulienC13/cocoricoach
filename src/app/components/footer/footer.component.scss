@@ -1,9 +1,43 @@
 @import "../../../styles.scss";
 
-#footer {
-  color: $primary-color;
+.footer {
   background-color: $primary-color;
 }
-.hover-red:hover {
-  color: #E53E3E; 
+
+.footer-inner {
+  background-color: rgba(255, 255, 255, 0.94);
+}
+
+.footer-link {
+  position: relative;
+  transition: color 0.22s ease;
+  color: $primary-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $special-color;
+    transition: width 0.28s ease;
+  }
+
+  &:hover {
+    color: $special-color;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.footer-brand {
+  color: $primary-color;
+  transition: color 0.22s ease;
+
+  &:hover {
+    color: $special-color;
+  }
 }
